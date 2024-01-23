@@ -1,0 +1,287 @@
+body {
+  background-color: #000;
+  color: #0f0;
+  font-family: 'Courier New', monospace;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes blinkCursor {
+  50% {
+    border-right-color: #0f0;
+  }
+}
+
+@keyframes typeAndDelete {
+  0%, 10% {
+    width: 0;
+  }
+  45%, 55% {
+    width: 6.2em;
+  }
+  90%, 100% {
+    width: 0;
+  }
+}
+
+.terminal-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1.5em;
+  box-sizing: border-box;
+}
+
+.terminal-controls {
+  float: right;
+}
+
+.text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typeAndDelete 4s steps(11) infinite, blinkCursor 0.5s step-end infinite alternate;
+  margin-top: 1rem;
+}
+
+.image-with-slogan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+}
+
+.Pub {
+  width: 70rem;
+  height: 40rem;
+  order: 1;
+  margin-right: 20px;
+}
+
+.slogan {
+  font-size: 40px;
+  color: #0f0;
+  padding: 40px;
+  margin-left: 50px;
+  order: 2;
+  background-color: #333;
+  box-shadow: #000 10px 10px 10px 5px;
+  border-radius: 10px 100px / 120px;
+}
+
+#roster {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+  gap: 20px;
+  background-color: #333;
+}
+
+#roster .book {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 1px 1px 12px #0f0;
+  perspective: 2000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #0f0;
+}
+
+#roster .book p {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#roster .book .social-media {
+  text-align: center;
+}
+
+#roster .cover {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+  transform-origin: 0;
+  box-shadow: 1px 1px 12px #0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#roster .cover img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#roster .cover p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#roster .book:hover .cover {
+  transition: all 0.5s;
+  transform: rotateY(-80deg);
+}
+
+#roster .social-media h2 {
+  margin-bottom: 5px;
+}
+
+#roster .social-media a {
+  margin: 0 5px;
+  text-decoration: none;
+  color: inherit;
+}
+
+#roster .social-media #insta:hover {
+  color: #f64c72;
+}
+
+#roster .social-media #yt:hover {
+  color: #ff0000;
+}
+
+#roster .social-media a i {
+  font-size: 10rem;
+}
+
+footer {
+  background-color: #333;
+  color: #0f0;
+  padding-top: 40px;
+  text-align: center;
+  border: 2px solid #1d1c1c;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.subscribe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+#emailInput {
+  padding: 8px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+#subscribeButton {
+  padding: 10px;
+  background-color: #4caf50;
+  color: #0f0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #333;
+  color: #0f0;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.social-icon {
+  margin: 0 10px;
+  color: #0f0;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+#dis,
+#ins,
+#you {
+  font-size: 50px;
+}
+
+#dis:hover {
+  color: #240655;
+}
+
+#ins:hover {
+  color: #f64c72;
+}
+
+#you:hover {
+  color: #ff0000;
+}
+
+
+
+
+
+
+.buy-us-coffee {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+}
+
+
+.buy-us-coffee a {
+  text-decoration: none;
+  color: yellow;
+}
+
+
+.buy-us-coffee a i{
+  font-size: 50px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .Pub {
+    width: 100%;
+    margin-right: 0;
+    height:15rem;
+    width:20rem ;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+
+  .slogan {
+    margin-left: 0;
+    font-size: 10px;
+  }
+
+  #roster .book {
+    width: 100%;
+  }
+}
